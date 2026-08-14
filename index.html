@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +12,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet">
 
 
 <style>
@@ -33,10 +37,15 @@ html {
 }
 
 body {
-    background: #0d0d0d;
-    color: #f5f1eb;
+
+    background: #f8e9ec;
+
+    color: #3a292d;
+
     font-family: "Inter", sans-serif;
+
     font-weight: 300;
+
     overflow-x: hidden;
 }
 
@@ -46,7 +55,9 @@ body {
 ================================================== */
 
 .hero {
+
     height: 100svh;
+
     min-height: 650px;
 
     position: relative;
@@ -54,8 +65,10 @@ body {
     overflow: hidden;
 
     display: flex;
+
     align-items: flex-end;
 }
+
 
 .hero-bg {
 
@@ -64,19 +77,23 @@ body {
     inset: 0;
 
     background:
+
         linear-gradient(
             to bottom,
-            rgba(0,0,0,.05),
-            rgba(0,0,0,.18) 45%,
-            rgba(0,0,0,.92) 100%
+            rgba(90,40,55,.02),
+            rgba(90,40,55,.10) 50%,
+            rgba(55,20,30,.60) 100%
         ),
+
         url("images/hero.jpg")
         center/cover no-repeat;
 
     transform: scale(1.03);
 
-    animation: heroZoom 8s ease-out forwards;
+    animation:
+        heroZoom 8s ease-out forwards;
 }
+
 
 @keyframes heroZoom {
 
@@ -104,6 +121,8 @@ body {
 
     text-align: center;
 
+    color: white;
+
     animation:
         fadeUp 1.4s ease;
 }
@@ -117,7 +136,7 @@ body {
 
     font-size: 10px;
 
-    opacity: .75;
+    opacity: .85;
 
     margin-bottom: 18px;
 }
@@ -148,7 +167,7 @@ body {
 
     letter-spacing: 4px;
 
-    opacity: .75;
+    opacity: .85;
 }
 
 
@@ -162,7 +181,7 @@ body {
         14px 30px;
 
     border:
-        1px solid rgba(255,255,255,.45);
+        1px solid rgba(255,255,255,.7);
 
     border-radius: 100px;
 
@@ -184,7 +203,7 @@ body {
 
     background: white;
 
-    color: #111;
+    color: #6e3f4b;
 }
 
 
@@ -213,7 +232,7 @@ body {
 
     letter-spacing: 4px;
 
-    opacity: .5;
+    color: #a96d7a;
 
     margin-bottom: 20px;
 }
@@ -231,6 +250,8 @@ body {
     font-weight: 400;
 
     line-height: .95;
+
+    color: #4a3037;
 }
 
 
@@ -241,7 +262,7 @@ body {
     margin:
         30px auto 0;
 
-    color: #aaa;
+    color: #8d6871;
 
     line-height: 1.9;
 
@@ -293,7 +314,7 @@ body {
     width: 1px;
 
     background:
-        rgba(255,255,255,.15);
+        rgba(160,90,105,.25);
 }
 
 
@@ -324,12 +345,12 @@ body {
 
 .memory-dot {
 
-    width: 8px;
+    width: 9px;
 
-    height: 8px;
+    height: 9px;
 
     border:
-        1px solid white;
+        1px solid #b77b87;
 
     border-radius: 50%;
 
@@ -337,7 +358,7 @@ body {
 
     top: 42px;
 
-    background: #0d0d0d;
+    background: #f8e9ec;
 }
 
 
@@ -365,7 +386,11 @@ body {
 
     margin-bottom: 20px;
 
-    filter: brightness(.92);
+    border-radius: 2px;
+
+    filter:
+        saturate(.9)
+        brightness(.98);
 }
 
 
@@ -377,7 +402,7 @@ body {
 
     text-transform: uppercase;
 
-    opacity: .45;
+    color: #b07784;
 }
 
 
@@ -392,12 +417,14 @@ body {
     font-weight: 400;
 
     margin: 8px 0;
+
+    color: #51343d;
 }
 
 
 .memory p {
 
-    color: #999;
+    color: #906c75;
 
     font-size: 12px;
 
@@ -438,11 +465,11 @@ body {
 
     text-transform: uppercase;
 
-    opacity: .35;
+    color: #a66d79;
+
+    opacity: .8;
 }
 
-
-/* PHOTO STACK */
 
 .photo-stack {
 
@@ -459,22 +486,20 @@ body {
 }
 
 
-/* كل صورة */
-
 .stack-photo {
 
     position: absolute;
 
     inset: 0;
 
-    background: #171717;
+    background: #fff;
 
     padding: 10px;
 
-    border-radius: 3px;
+    border-radius: 4px;
 
     box-shadow:
-        0 25px 60px rgba(0,0,0,.5);
+        0 25px 60px rgba(130,70,85,.20);
 
     cursor: grab;
 
@@ -492,8 +517,6 @@ body {
 }
 
 
-/* أثناء السحب */
-
 .stack-photo.dragging {
 
     cursor: grabbing;
@@ -501,8 +524,6 @@ body {
     transition: none;
 }
 
-
-/* الصورة نفسها */
 
 .stack-photo img {
 
@@ -518,7 +539,7 @@ body {
 }
 
 
-/* ترتيب الصور */
+/* ترتيب الكروت */
 
 .stack-photo:nth-child(1) {
 
@@ -602,7 +623,12 @@ body {
 
     overflow: hidden;
 
-    background: #000;
+    background: #efd5db;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 20px 50px rgba(120,60,75,.15);
 }
 
 
@@ -625,7 +651,15 @@ body {
 
     text-align: center;
 
-    background: #151515;
+    background: #f1d8de;
+
+    color: #4a3037;
+}
+
+
+.song .section-title {
+
+    color: #4a3037;
 }
 
 
@@ -636,7 +670,7 @@ body {
     height: 90px;
 
     border:
-        1px solid rgba(255,255,255,.3);
+        1px solid rgba(140,75,90,.4);
 
     border-radius: 50%;
 
@@ -650,6 +684,19 @@ body {
     align-items: center;
 
     font-size: 22px;
+
+    color: #734654;
+
+    transition: .3s;
+
+    cursor: pointer;
+}
+
+
+.song-circle:hover {
+
+    transform: scale(1.05);
+
 }
 
 
@@ -660,6 +707,8 @@ body {
         serif;
 
     font-size: 32px;
+
+    color: #563741;
 }
 
 
@@ -693,7 +742,7 @@ body {
 
     font-style: italic;
 
-    color: #ddd;
+    color: #51343d;
 }
 
 
@@ -705,9 +754,11 @@ body {
 
     letter-spacing: 4px;
 
-    opacity: .45;
+    opacity: .55;
 
     text-transform: uppercase;
+
+    color: #8c5e69;
 }
 
 
@@ -723,7 +774,9 @@ footer {
     text-align: center;
 
     border-top:
-        1px solid rgba(255,255,255,.08);
+        1px solid rgba(160,90,105,.18);
+
+    background: #f4dfe4;
 }
 
 
@@ -734,6 +787,8 @@ footer {
         serif;
 
     font-size: 40px;
+
+    color: #51343d;
 }
 
 
@@ -745,9 +800,11 @@ footer p {
 
     letter-spacing: 3px;
 
-    opacity: .35;
+    opacity: .55;
 
     text-transform: uppercase;
+
+    color: #8b626d;
 }
 
 
@@ -770,23 +827,26 @@ footer p {
     border-radius: 50%;
 
     border:
-        1px solid rgba(255,255,255,.4);
+        1px solid rgba(140,75,90,.4);
 
     background:
-        rgba(10,10,10,.65);
+        rgba(255,245,247,.85);
 
     backdrop-filter: blur(10px);
 
-    color: white;
+    color: #734654;
 
     z-index: 100;
 
     cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(120,60,75,.18);
 }
 
 
 /* ==================================================
-   FADE ANIMATION
+   ANIMATION
 ================================================== */
 
 @keyframes fadeUp {
@@ -818,24 +878,24 @@ footer p {
 
 @media (max-width: 700px) {
 
-
     .hero-content {
 
         padding-bottom: 45px;
+
     }
 
 
     .names {
 
         font-size: 76px;
+
     }
 
-
-    /* STORY */
 
     .timeline::before {
 
         left: 8px;
+
     }
 
 
@@ -850,6 +910,7 @@ footer p {
             30px 10px 60px 35px;
 
         text-align: left;
+
     }
 
 
@@ -862,24 +923,19 @@ footer p {
         left: 4px;
 
         right: auto;
+
     }
 
-
-    /* SWIPE */
 
     .photo-stack {
 
         width: 88vw;
 
         height: 500px;
+
     }
 
 }
-
-
-/* ==================================================
-   END CSS
-================================================== */
 
 </style>
 
@@ -897,7 +953,6 @@ footer p {
     class="hero"
     id="home"
 >
-
 
     <div class="hero-bg"></div>
 
@@ -938,7 +993,6 @@ footer p {
 
 
     </div>
-
 
 </section>
 
@@ -1011,14 +1065,10 @@ footer p {
     </div>
 
 
-
     <div class="timeline">
 
 
-        <!-- MEMORY 1 -->
-
         <div class="memory">
-
 
             <span class="memory-dot"></span>
 
@@ -1050,15 +1100,11 @@ footer p {
 
             </p>
 
-
         </div>
 
 
 
-        <!-- MEMORY 2 -->
-
         <div class="memory">
-
 
             <span class="memory-dot"></span>
 
@@ -1090,15 +1136,11 @@ footer p {
 
             </p>
 
-
         </div>
 
 
 
-        <!-- MEMORY 3 -->
-
         <div class="memory">
-
 
             <span class="memory-dot"></span>
 
@@ -1130,12 +1172,10 @@ footer p {
 
             </p>
 
-
         </div>
 
 
     </div>
-
 
 </section>
 
@@ -1176,11 +1216,8 @@ footer p {
     </div>
 
 
-
     <div class="photo-stack">
 
-
-        <!-- PHOTO 1 -->
 
         <div class="stack-photo">
 
@@ -1192,8 +1229,6 @@ footer p {
         </div>
 
 
-        <!-- PHOTO 2 -->
-
         <div class="stack-photo">
 
             <img
@@ -1203,8 +1238,6 @@ footer p {
 
         </div>
 
-
-        <!-- PHOTO 3 -->
 
         <div class="stack-photo">
 
@@ -1216,8 +1249,6 @@ footer p {
         </div>
 
 
-        <!-- PHOTO 4 -->
-
         <div class="stack-photo">
 
             <img
@@ -1227,8 +1258,6 @@ footer p {
 
         </div>
 
-
-        <!-- PHOTO 5 -->
 
         <div class="stack-photo">
 
@@ -1241,7 +1270,6 @@ footer p {
 
 
     </div>
-
 
 </section>
 
@@ -1274,7 +1302,6 @@ footer p {
     </div>
 
 
-
     <div class="video-wrapper">
 
 
@@ -1298,7 +1325,6 @@ footer p {
 
 
     </div>
-
 
 </section>
 
@@ -1326,7 +1352,10 @@ footer p {
     </h2>
 
 
-    <div class="song-circle">
+    <div
+        class="song-circle"
+        id="songCircle"
+    >
 
         ♫
 
@@ -1413,15 +1442,12 @@ footer p {
     loop
 >
 
-
     <source
         src="music/song.mp3"
         type="audio/mpeg"
     >
 
-
 </audio>
-
 
 
 <button
@@ -1437,15 +1463,12 @@ footer p {
 
 <script>
 
-
 /* ==================================================
    SWIPE PHOTO STACK
 ================================================== */
 
-
 const stack =
     document.querySelector(".photo-stack");
-
 
 const cards =
     document.querySelectorAll(".stack-photo");
@@ -1455,32 +1478,23 @@ let activeCard = 0;
 
 let startX = 0;
 
-let startY = 0;
-
 let currentX = 0;
 
 let dragging = false;
-
 
 
 /* ==================================================
    TOUCH START
 ================================================== */
 
-
 stack.addEventListener(
-
     "touchstart",
-
     startSwipe,
-
     { passive: true }
-
 );
 
 
 function startSwipe(event) {
-
 
     if (activeCard >= cards.length) {
 
@@ -1497,12 +1511,7 @@ function startSwipe(event) {
         touch.clientX;
 
 
-    startY =
-        touch.clientY;
-
-
     currentX = 0;
-
 
     dragging = true;
 
@@ -1514,25 +1523,18 @@ function startSwipe(event) {
 }
 
 
-
 /* ==================================================
    TOUCH MOVE
 ================================================== */
 
-
 stack.addEventListener(
-
     "touchmove",
-
     moveSwipe,
-
     { passive: true }
-
 );
 
 
 function moveSwipe(event) {
-
 
     if (!dragging) {
 
@@ -1580,8 +1582,8 @@ function moveSwipe(event) {
 
         const scale =
 
-            0.97 +
-            (0.03 * progress);
+            .97 +
+            (.03 * progress);
 
 
         nextCard.style.transform =
@@ -1595,23 +1597,17 @@ function moveSwipe(event) {
 }
 
 
-
 /* ==================================================
    TOUCH END
 ================================================== */
 
-
 stack.addEventListener(
-
     "touchend",
-
     endSwipe
-
 );
 
 
 function endSwipe() {
-
 
     if (!dragging) {
 
@@ -1633,11 +1629,7 @@ function endSwipe() {
     const threshold = 120;
 
 
-
-    /* ==============================================
-       SWIPE
-    ============================================== */
-
+    /* SWIPE */
 
     if (
         Math.abs(currentX)
@@ -1677,9 +1669,7 @@ function endSwipe() {
 
             if (nextCard) {
 
-
                 nextCard.style.transform =
-
                     "rotate(-2deg)";
 
             }
@@ -1687,15 +1677,10 @@ function endSwipe() {
 
         }, 150);
 
-
     }
 
 
-
-    /* ==============================================
-       NOT ENOUGH SWIPE
-    ============================================== */
-
+    /* RETURN */
 
     else {
 
@@ -1710,12 +1695,11 @@ function endSwipe() {
 
         if (nextCard) {
 
-
             nextCard.style.transform =
 
-                "scale(.97)
-                 rotate(3deg)
-                 translate(5px, 5px)";
+                "scale(.97) " +
+                "rotate(3deg) " +
+                "translate(5px, 5px)";
 
         }
 
@@ -1727,11 +1711,9 @@ function endSwipe() {
 }
 
 
-
 /* ==================================================
    MUSIC
 ================================================== */
-
 
 const music =
     document.getElementById("music");
@@ -1741,49 +1723,66 @@ const musicBtn =
     document.getElementById("musicBtn");
 
 
+const songCircle =
+    document.getElementById("songCircle");
+
+
 let playing = false;
 
 
-musicBtn.addEventListener(
-
-    "click",
-
-    () => {
+function toggleMusic() {
 
 
-        if (playing) {
+    if (playing) {
 
 
-            music.pause();
+        music.pause();
 
 
-            musicBtn.innerHTML =
-                "♫";
+        musicBtn.innerHTML =
+            "♫";
 
 
-            playing = false;
+        songCircle.innerHTML =
+            "♫";
 
 
-        }
+        playing = false;
 
-        else {
-
-
-            music.play();
-
-
-            musicBtn.innerHTML =
-                "Ⅱ";
-
-
-            playing = true;
-
-        }
 
     }
 
+    else {
+
+
+        music.play();
+
+
+        musicBtn.innerHTML =
+            "Ⅱ";
+
+
+        songCircle.innerHTML =
+            "Ⅱ";
+
+
+        playing = true;
+
+    }
+
+}
+
+
+musicBtn.addEventListener(
+    "click",
+    toggleMusic
 );
 
+
+songCircle.addEventListener(
+    "click",
+    toggleMusic
+);
 
 </script>
 
